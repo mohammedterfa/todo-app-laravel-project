@@ -3,16 +3,18 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Todos;
 
-class DatabaseSeeder extends Seeder
+
+class todosSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(todosSeeder::class);
+        \App\Models\Todos::factory()->count(10)->create(); 
     }
 }
